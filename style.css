@@ -6,7 +6,8 @@ html {
   align-items: center;
   justify-content: flex-end;
   height: 80vh;
-  margin: 0;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
   background-color: #000;
   overflow: hidden;
 }
@@ -36,7 +37,7 @@ html {
 }
 
 .button-container {
-  margin-bottom: clamp(30px, 8vh, 70px);
+  margin-bottom: clamp(30px, 8vh, 30px);
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -114,7 +115,7 @@ button {
   }
 
   .button-container {
-    margin-bottom: 50px;
+    margin-bottom: 35px;
   }
 
   button {
