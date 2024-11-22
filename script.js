@@ -55,7 +55,7 @@ function animateLetter(letter, hue, playSound = true) {
   const startY = rect.top + rect.height / 2;
 
   const randomX = (Math.random() - 0.5) * 50;
-  const randomY = -(Math.random() * 200 + 200);
+  const randomY = -(Math.random() * 150 + 200);
   letter.style.setProperty("--random-x", `${randomX}px`);
   letter.style.setProperty("--random-y", `${randomY}px`);
 
