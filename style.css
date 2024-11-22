@@ -99,3 +99,61 @@ button {
 .letter.animating {
   animation: firework 1.5s cubic-bezier(0.8, 0, 0.5, 1) forwards;
 }
+
+/* 아이폰 대응 미디어 쿼리 */
+@media screen and (max-width: 428px) {
+  /* iPhone 13 Pro Max 까지 대응 */
+  .firework-container {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+
+  .letter {
+    margin: 0 8px;
+  }
+
+  .button-container {
+    margin-bottom: 40px; /* 하단 여백 추가 */
+  }
+
+  button {
+    height: 45px;
+    width: 45px;
+    font-size: 1rem;
+    margin: 4px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  /* iPhone SE, mini 대응 */
+  .firework-container {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+  }
+
+  .letter {
+    margin: 0 6px;
+  }
+
+  button {
+    height: 40px;
+    width: 40px;
+    font-size: 0.9rem;
+    margin: 3px;
+  }
+}
+
+/* 파티클 크기도 화면 크기에 따라 조정 */
+@media screen and (max-width: 428px) {
+  .particle {
+    width: 6px;
+    height: 6px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .particle {
+    width: 5px;
+    height: 5px;
+  }
+}
