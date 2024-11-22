@@ -13,17 +13,17 @@ html {
 
 .firework-container {
   display: flex;
-  font-size: 2.5rem;
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
   font-weight: bold;
   color: white;
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: clamp(15px, 3vh, 40px);
 }
 
 .letter {
   cursor: pointer;
   transition: transform 0.3s;
-  margin: 0 10px;
+  margin: 0 clamp(5px, 1.5vw, 15px);
   visibility: hidden;
 }
 
@@ -36,9 +36,12 @@ html {
 }
 
 .button-container {
-  margin-bottom: 70px;
+  margin-bottom: clamp(30px, 8vh, 70px);
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: clamp(3px, 1vw, 8px);
 }
 
 button {
@@ -46,11 +49,9 @@ button {
   color: white;
   border: none;
   border-radius: 5px;
-  height: 50px;
-  width: 50px;
-  margin: 5px;
-  padding: 0;
-  font-size: 1.2rem;
+  height: clamp(35px, 6vw, 50px);
+  width: clamp(35px, 6vw, 50px);
+  font-size: clamp(0.8rem, 2vw, 1.2rem);
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -60,8 +61,8 @@ button {
 /* 파티클 스타일 */
 .particle {
   position: absolute;
-  width: 8px;
-  height: 8px;
+  width: clamp(4px, 0.8vw, 8px);
+  height: clamp(4px, 0.8vw, 8px);
   border-radius: 50%;
   background-color: hsl(var(--hue), 100%, 50%);
   pointer-events: none;
@@ -212,5 +213,13 @@ button {
   .particle {
     width: 5px;
     height: 5px;
+  }
+}
+
+/* 터치 디바이스 최적화 */
+@media (hover: none) {
+  button {
+    min-height: 44px;
+    min-width: 44px;
   }
 }
