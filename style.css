@@ -5,6 +5,7 @@ html {
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
+  margin-top: 5vh;
   height: 90vh;
   margin-bottom: 5vh;
   background-color: #000;
@@ -67,4 +68,35 @@ button {
   background-color: hsl(var(--hue), 100%, 50%);
   pointer-events: none;
   animation: explode 2s ease-out forwards;
+}
+
+/* 파티클 애니메이션 */
+@keyframes explode {
+  from {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translate(var(--x), var(--y)) scale(0.5);
+  }
+}
+/* 기존 스타일에 추가 */
+@keyframes firework {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(var(--random-x), var(--random-y)) scale(0.8);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translate(var(--random-x), var(--random-y)) scale(0);
+    opacity: 0;
+  }
+}
+
+.letter.animating {
+  animation: firework 1.5s cubic-bezier(0.8, 0, 0.5, 1) forwards;
 }
